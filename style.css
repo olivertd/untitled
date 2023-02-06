@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+}
+
+.landscape-container {
+    width: 100%;
+    padding-top: calc(100% * 9 / 16);
+    background-image: url('cedescars.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.landscape-container::before {
+    padding-top: calc(100% * 9 / 16);
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(coupemask.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+.landscape-container .svg-img {
+    max-width: 70%;
+    width: auto;
+    height: auto;
+    filter: invert(100%) grayscale(100%) brightness(200%) contrast(200%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    margin-bottom: 58%;
+}
+
+.landscape-container .svg-img-2 {
+    max-width: 20%;
+    width: auto;
+    height: auto;
+    filter: invert(100%) grayscale(100%) brightness(200%) contrast(200%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -2%;
+    margin-bottom: 12%;
+}
+
+.landscape-container .svg-img-3 {
+    max-width: 15%;
+    right: 18%;
+    width: auto;
+    height: auto;
+    filter: invert(100%) grayscale(100%) brightness(200%) contrast(200%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-bottom: 85%;
+    transform: rotate(20deg);
+}
+
+.gray-section {
+    background-color: #121212;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Goofy-Regular';
+    color: #FFFFFF;
+}
+
+/* Custom CSS Scrollbar */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #6d2eff #121212;
+}
+
+/* Googl Chrome, Microsoft Edge, and Mac OS Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #6d2eff;
+    border-radius: 10px;
+    border: 0px dashed #474747;
+}
+
+/* Rund Logga Rotation*/
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.landscape-container .svg-img-2 {
+    animation: rotation 10s linear infinite;
+}
+
+/* Grid CSS */
+
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-auto-flow: row;
+        padding: 20px;
+    }
+}
+
+.BILD {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 20px;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.BILD img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cv-text {
+    grid-area: 1 / 2 / 2 / 4;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rockwell;
+}
+
+.text-box {
+    background-color: #252531;
+    padding: 20px;
+    border-radius: 10px;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.bild-2 {
+    grid-area: 2 / 3 / 3 / 4;
+    padding: 20px;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.bild-2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Utbilding {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rockwell;
+}
+
+.Erfarenhet {
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rockwell;
+}
+
+.Contact-Button {
+    grid-area: 3 / 1 / 4 / 4;
+    padding: 20px;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-family: Rockwell;
+}
